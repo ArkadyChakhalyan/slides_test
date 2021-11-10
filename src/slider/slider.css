@@ -1,0 +1,33 @@
+.slides {
+    width: 9999px;
+    height: 768px;
+    padding: 0;
+    margin: 0; 
+    font-size: 0;
+    transition: margin 1s ease-out;
+}
+
+.slides--transitioning {
+    transition: none;
+}
+
+.slides__item {
+    width: 1024px;
+    height: 768px;
+    background-size: 1024px 768px;
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+}
+
+.slide-1 {
+    background-image: url('../images/bg_1.png');
+}
+
+.slide-2 {
+    background-image: url('../images/bg_2.png');
+}
+
+.slide-3 {
+    background-image: url('../images/bg_3.png');
+}

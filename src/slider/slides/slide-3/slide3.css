@@ -1,0 +1,16 @@
+.slide-3__title--small {
+    margin-top: 90px;
+    margin-left: 300px;
+    margin-bottom: 10px;
+    z-index: 1;
+}
+
+.slide-3__title--large {
+    margin-left: 293px;
+    z-index: 1;
+}
+
+.btn-about {
+    margin-left: 508px;
+    margin-top: -120px;
+}

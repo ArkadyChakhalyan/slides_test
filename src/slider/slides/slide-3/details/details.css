@@ -1,0 +1,174 @@
+.bottle {
+    position: absolute;
+    top: -260px;
+    left: -64px;
+    z-index: 2;
+}
+
+.bubble-1 {
+    position: absolute;
+    left: 156px;
+    top: 120px;
+    z-index: 2;
+    animation: animateBubble1 4s ease-in-out 2s;
+    animation-iteration-count: infinite;
+}
+
+.bubble-2 {
+    position: absolute;
+    left: 120px;
+    bottom: -34px;
+    z-index: 2;
+    animation: animateBubble2 4.5s ease-in-out 1s;
+    animation-iteration-count: infinite;
+}
+
+.bubble-3 {
+    position: absolute;
+    left: -4px;
+    bottom: 264px;
+    z-index: 2;
+    animation: animateBubble3 6s ease-in-out 1s;
+    animation-iteration-count: infinite;
+}
+
+.bubble-4 {
+    position: absolute;
+    left: -10px;
+    bottom: 106px;
+    z-index: 9999;
+    animation: animateBubble4 4s ease-in-out 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.bubble-5 {
+    position: absolute;
+    left: 64px;
+    top: 196px;
+    z-index: 2;
+    animation: animateBubble5 3.5s ease-in-out 1s;
+    animation-iteration-count: infinite;
+}
+
+.bubble-6 {
+    position: absolute;
+    left: 136px;
+    top: 270px;
+    z-index: 2;
+    animation: animateBubble6 8s ease-in-out 2s;
+    animation-iteration-count: infinite;
+}
+
+.bubble-7 {
+    position: absolute;
+    left: 182px;
+    top: 52px;
+    z-index: 2;
+    animation: animateBubble7 2s ease-in-out 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.bubble-8 {
+    position: absolute;
+    left: 220px;
+    bottom: 86px;
+    z-index: 2;
+    animation: animateBubble8 4s ease-in-out 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animateBubble1 {
+    from {
+        transform: scale(0.5) translate(0);
+    }
+    45% {
+        transform: scale(0.51) translate(20px, 40px);
+    }
+    to {
+      transform: scale(0.5) translate(0);
+    }
+}
+
+@keyframes animateBubble2 {
+    from {
+        transform: scale(0.54) translate(0);
+    }
+    45% {
+        transform: scale(0.5) translate(-10px, 10px);
+    }
+    to {
+      transform: scale(0.54) translate(0);
+    }
+}
+
+@keyframes animateBubble3 {
+    from {
+        transform: scale(0.5) translate(0);
+    }
+    60% {
+        transform: scale(0.53) translate(30px, 40px);
+    }
+    to {
+      transform: scale(0.5) translate(0);
+    }
+}
+
+@keyframes animateBubble4 {
+    from {
+        transform: scale(0.5) translate(0);
+    }
+    55% {
+        transform: scale(0.53) translate(30px, 10px);
+    }
+    to {
+      transform: scale(0.5) translate(0);
+    }
+}
+
+@keyframes animateBubble5 {
+    from {
+        transform: scale(0.5) translate(0);
+    }
+    50% {
+        transform: scale(0.52) translate(20px, 30px);
+    }
+    to {
+      transform: scale(0.5) translate(0);
+    }
+}
+
+@keyframes animateBubble6 {
+    from {
+        transform: scale(0.5) translate(0);
+    }
+    50% {
+        transform: scale(0.52) translate(20px, -40px);
+    }
+    to {
+      transform: scale(0.5) translate(0);
+    }
+}
+
+@keyframes animateBubble7 {
+    from {
+        transform: scale(0.5) translate(0);
+    }
+    50% {
+        transform: scale(0.52) translate(10px, -15px);
+    }
+    to {
+      transform: scale(0.5) translate(0);
+    }
+}
+
+@keyframes animateBubble8 {
+    from {
+        transform: scale(0.5) translate(0);
+    }
+    50% {
+        transform: scale(0.51) translate(10px, 30px);
+    }
+    to {
+      transform: scale(0.5) translate(0);
+    }
+}

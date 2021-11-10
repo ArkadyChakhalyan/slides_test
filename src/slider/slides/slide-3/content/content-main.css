@@ -1,0 +1,32 @@
+.slide-3__main-content {
+    display: flex;
+    margin-top: 60px;
+    margin-left: 160px;
+}
+
+.slide-3__container-1 {
+    position: relative;
+    width: 240px;
+    height: 178px;
+    padding: 30px 40px 50px 160px;
+    margin-right: 40px;
+}
+
+.slide-3__container-2 {
+    position: relative;
+    width: 140px;
+    height: 70px;
+    padding: 30px 82px 50px 40px;
+}
+
+.icon-meal {
+    position: absolute;
+    top: -66px;
+    left: 120px;
+}
+
+.icon-schedule {
+    position: absolute;
+    top: -58px;
+    left: 4px;
+}

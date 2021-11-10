@@ -1,0 +1,23 @@
+.slide-1__container__bg {
+    position: absolute;
+    height: 768px;
+    width: 1024px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 76px;
+}
+
+.slide-1__title--small {
+    margin-top: 90px;
+}
+
+.slide-1__title--large {
+    margin-top: 20px;
+    margin-left: -4px;
+}
+
+.slide-1__btn-next {
+    margin-left: 420px;
+    margin-top: -138px;
+}
