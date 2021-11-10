@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useEffect } from 'react/cjs/react.development';
+import React, { useEffect } from 'react';
 import './slider.css';
 import { Slide1 } from './slides/slide-1/slide1';
 import { Slide2 } from './slides/slide-2/slide2';
@@ -65,7 +65,7 @@ export const Slider = ({ homePressed, resetHomePressed }) => {
             resetHomePressed();
             setPosition(0);
         }
-    }, [homePressed, resetHomePressed]);
+    }, [homePressed]);
 
     return (
         <div>
