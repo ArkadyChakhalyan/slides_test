@@ -6,7 +6,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: fadeIn 1.5s ease-in-out 0.4s;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out 0.4s forwards;
     animation-iteration-count: 1;
 }
 
