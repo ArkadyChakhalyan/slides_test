@@ -16,7 +16,7 @@ export const ScrollBar = ({ scrolled }) => {
     const elem = document.getElementsByClassName('slide-2__container')[0];
 
     const onTouchStart = (e) => {
-
+        
         e.stopPropagation();
         e.preventDefault();
 

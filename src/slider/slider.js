@@ -10,9 +10,11 @@ export const Slider = ({ homePressed, resetHomePressed }) => {
     const width = 1024;
     const [position, setPosition] = useState(0);
 
-    const [className, setClassName] = useState('slides')
+    const [className, setClassName] = useState('slides');
 
     const [popupOn, setPopupOn] = useState(false);
+
+    const [animationOn, setAnimationOn] = useState(false);
 
     const onTouchStart = (e) => {
 
@@ -25,6 +27,10 @@ export const Slider = ({ homePressed, resetHomePressed }) => {
 
         ul.addEventListener('touchmove', onTouchMove);
         ul.addEventListener('touchend', onTouchUp);
+
+        ul.addEventListener('transitionend', () => {
+            setAnimationOn(true);
+        })
 
         function onTouchMove(e) {
 
@@ -43,12 +49,15 @@ export const Slider = ({ homePressed, resetHomePressed }) => {
 
             ul.removeEventListener('touchmove', onTouchMove);
             ul.removeEventListener('touchend', onTouchUp);
+
             setClassName('slides');
 
             if (clientX > touchStart) {
                 setPosition(Math.round(Math.min((position + clientX - touchStart), 0) / width) * width);
             } else {
                 setPosition((Math.round(Math.max((position - (touchStart - clientX)), - width * 2) / width) * width));
+                
+                // if (Math.round((Math.round(Math.max((position - (touchStart - clientX)), - width * 2) / width)) === -1)) setAnimationOn(true);
             }
         }
     };
@@ -66,13 +75,15 @@ export const Slider = ({ homePressed, resetHomePressed }) => {
         <div>
             <ul
                 className={className}
-                style={{ marginLeft: position + 'px' }}
+                style={{ transform: `translateX(${position}px)` }}
                 onTouchMove={onTouchMove} >
                 <li className='slides__item slide-1'>
                     <Slide1 onClick={() => setPosition(-1024)} />
                 </li>
                 <li className='slides__item slide-2'>
-                    <Slide2 />
+                    <Slide2
+                        animationOn={animationOn}
+                        resetAnimation={() => setAnimationOn(false)} />
                 </li>
                 <li className='slides__item slide-3'>
                     <Slide3

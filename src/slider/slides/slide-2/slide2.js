@@ -3,25 +3,27 @@ import { DetailsSlide2 } from "./details/details-slide-2";
 import { ScrollBar } from "./scroll-bar/scroll-bar";
 import './slide2.css';
 
-export const Slide2 = () => {
-    
+export const Slide2 = ({ animationOn, resetAnimation }) => {
+
     const [scrolled, setScrolled] = useState(0);
 
     const elem = document.getElementsByClassName('slide-2__container')[0];
 
     return (
         <Fragment>
-            <DetailsSlide2 />
+            <DetailsSlide2
+                animationOn={animationOn}
+                resetAnimation={resetAnimation} />
             <div className='container__slide'>
                 <h3 className="title title--small slide-2__title--small">
                     текст
                     <br />сообщения
                 </h3>
                 <div className='slide-2__main-content' >
-                    <ScrollBar scrolled={scrolled}/>
-                    <div 
+                    <ScrollBar scrolled={scrolled} />
+                    <div
                         className="container slide-2__container"
-                        onScroll={() => {setScrolled(elem.scrollTop)}} >
+                        onScroll={() => { setScrolled(elem.scrollTop) }} >
                         <p className="text">
                             <b>Lorem ipsum dolor sit amet</b>, consectetur adipiscing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore magna aliqua.
