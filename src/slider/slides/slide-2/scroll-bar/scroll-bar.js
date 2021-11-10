@@ -5,8 +5,6 @@ import './scroll-bar.css';
 
 export const ScrollBar = ({ scrolled }) => {
 
-    const [className, setClassName] = useState('scroll__top');
-
     const [position, setPosition] = useState(0);
 
     useEffect(() => {
@@ -23,8 +21,6 @@ export const ScrollBar = ({ scrolled }) => {
         
         e.stopPropagation();
         e.preventDefault();
-
-        setClassName('scroll__top scroll__top--transitioning');
 
         const moveY = e.touches[0].clientY - scroller.getBoundingClientRect().top;
 
@@ -51,11 +47,8 @@ export const ScrollBar = ({ scrolled }) => {
         };
 
         function onTouchEnd() {
-            
             document.removeEventListener('touchend', onTouchEnd);
             document.removeEventListener('touchmove', onTouchMove);
-
-            setClassName('scroll__top');
         };
     };
 
@@ -69,7 +62,7 @@ export const ScrollBar = ({ scrolled }) => {
                 className="scroll__bg"
                 src={scrollBg} />
             <img
-                className={className}
+                className='scroll__top'
                 src={scrollTop}
                 onTouchStart={onTouchStart}
                 onDragStart={onDragStart}

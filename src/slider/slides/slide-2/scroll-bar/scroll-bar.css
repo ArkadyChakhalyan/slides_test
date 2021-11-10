@@ -11,10 +11,6 @@
     position: absolute;
     margin-top: -20px;
     top: 0px;
-    transition: all .3s ease-out;
-}
-.scroll__top--transitioning {
-    transition: none;
 }
 
 .scroll__bg {
