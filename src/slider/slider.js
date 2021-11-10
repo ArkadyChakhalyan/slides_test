@@ -65,7 +65,7 @@ export const Slider = ({ homePressed, resetHomePressed }) => {
             resetHomePressed();
             setPosition(0);
         }
-    }, [homePressed]);
+    }, [homePressed, resetHomePressed]);
 
     return (
         <div>
