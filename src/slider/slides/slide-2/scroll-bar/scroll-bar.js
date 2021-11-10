@@ -1,6 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-// import scrollTop from '../../../../images/scroll_top.png';
-// import scrollBg from '../../../../images/scroll_bg.png';
 import './scroll-bar.scss';
 
 export const ScrollBar = ({ scroll }) => {
