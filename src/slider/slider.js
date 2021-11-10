@@ -28,10 +28,6 @@ export const Slider = ({ homePressed, resetHomePressed }) => {
         ul.addEventListener('touchmove', onTouchMove);
         ul.addEventListener('touchend', onTouchUp);
 
-        ul.addEventListener('transitionend', () => {
-            setAnimationOn(true);
-        })
-
         function onTouchMove(e) {
 
             let clientX = e.touches[0].clientX;
