@@ -8,7 +8,9 @@ export const ScrollBar = ({ scrolled }) => {
     const [position, setPosition] = useState(0);
 
     useEffect(() => {
-        setPosition(scrollTo(scrolled, 155, 330));
+        if (scrolled < 0) setPosition(0);
+        else if (scrolled > 155) setPosition(scrollTo(155, 155, 330));
+        else setPosition(scrollTo(scrolled, 155, 330));
     }, [scrolled])
 
     const scroller = document.getElementsByClassName('scroll__top')[0];

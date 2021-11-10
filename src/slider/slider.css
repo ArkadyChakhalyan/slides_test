@@ -30,5 +30,6 @@
 }
 
 .slide-3 {
+    margin-left: -1px;
     background-image: url('../images/bg_3.png');
 }
