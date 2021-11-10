@@ -17,8 +17,7 @@ export const Slider = ({ homePressed, resetHomePressed }) => {
     const [animationOn, setAnimationOn] = useState(false);
 
     const onTouchStart = (e) => {
-
-        e.preventDefault();
+        console.log('2')
 
         setClassName('slides slides--transitioning');
 

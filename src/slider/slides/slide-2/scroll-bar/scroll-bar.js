@@ -1,42 +1,35 @@
-import React, { useEffect, useState } from 'react';
-import scrollTop from '../../../../images/scroll_top.png';
-import scrollBg from '../../../../images/scroll_bg.png';
-import './scroll-bar.css';
+import React, { useEffect, useRef, useState } from 'react';
+// import scrollTop from '../../../../images/scroll_top.png';
+// import scrollBg from '../../../../images/scroll_bg.png';
+import './scroll-bar.scss';
 
-export const ScrollBar = ({ scrolled }) => {
-
-    const [className, setClassName] = useState('scroll__top');
-
+export const ScrollBar = ({ scroll }) => {
     const [position, setPosition] = useState(0);
 
     useEffect(() => {
-        if (scrolled < 0) setPosition(0);
-        else if (scrolled > 155) setPosition(scrollTo(155, 155, 330));
-        else setPosition(scrollTo(scrolled, 155, 330));
-    }, [scrolled])
+        if (scroll < 0) setPosition(0);
+        else if (scroll > 155) setPosition(scrollTo(155, 155, 430));
+        else setPosition(scrollTo(scroll, 155, 430));
+    }, [scroll]);
 
-    const scroller = document.getElementsByClassName('scroll__top')[0];
-    const scrollerBg = document.getElementsByClassName('scroll')[0];
+    const scrollerBg = useRef(null);
     const elem = document.getElementsByClassName('slide-2__container')[0];
 
     const onTouchStart = (e) => {
-        
+        console.log('1')
         e.stopPropagation();
-        e.preventDefault();
 
-        setClassName('scroll__top scroll__top--transitioning');
+        const moveY = e.touches[0].clientY - e.target.getBoundingClientRect().top;
 
-        const moveY = e.touches[0].clientY - scroller.getBoundingClientRect().top;
-
-        document.addEventListener('touchmove', onTouchMove);
+        document.addEventListener('touchmove', onTouchMove, true);
         document.addEventListener('touchend', onTouchEnd);
 
         function onTouchMove(e) {
-            
+            e.stopPropagation();
             let clientY = e.touches[0].clientY;
 
-            let newPosition = clientY - moveY - scrollerBg.getBoundingClientRect().top - 30;
-            const bottomPoint = scrollerBg.offsetHeight - scroller.offsetHeight + 102;
+            let newPosition = clientY - moveY - scrollerBg?.current?.getBoundingClientRect().top;
+            const bottomPoint = scrollerBg?.current?.offsetHeight - e.target.offsetHeight;
 
             if (newPosition < 0) {
                 newPosition = 0;
@@ -47,33 +40,24 @@ export const ScrollBar = ({ scrolled }) => {
             }
 
             setPosition(newPosition);
-            elem.scrollTo(0, scrollTo(newPosition, 330, 155));
+            elem.scrollTo(0, scrollTo(newPosition, 430, 155));
         };
 
         function onTouchEnd() {
-            
             document.removeEventListener('touchend', onTouchEnd);
-            document.removeEventListener('touchmove', onTouchMove);
-
-            setClassName('scroll__top');
+            document.removeEventListener('touchmove', onTouchMove, true);
         };
     };
 
-    const onDragStart = () => {
-        return false;
-    };
 
     return (
-        <div className="scroll">
-            <img
-                className="scroll__bg"
-                src={scrollBg} />
-            <img
-                className={className}
-                src={scrollTop}
+        <div className="scroll" ref={scrollerBg}>
+            <div className="scroll__bg" />
+            <div
+                className="scroll__top"
                 onTouchStart={onTouchStart}
-                onDragStart={onDragStart}
-                style={{ top: position + 'px' }} />
+                style={{ top: position + 'px' }} 
+            />
         </div>
     );
 };
