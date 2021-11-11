@@ -1,23 +1,25 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './scroll-bar.scss';
 
-export const ScrollBar = ({ scroll, maxLength }) => {
+export const ScrollBar = ({ scroll, containerLength }) => {
 
     const [position, setPosition] = useState(0);
 
-    useEffect(() => {
-        if (scroll < 0) setPosition(0);
-        else if (scroll > maxLength) setPosition(scrollTo(maxLength, maxLength, scrollHeight));
-        else setPosition(scrollTo(scroll, maxLength, scrollHeight));
-    }, [scroll]);
-
     const scrollerBg = useRef(null);
+    const scrollerTop = useRef(null);
     const elem = document.getElementsByClassName('slide-2__container')[0];
+
+    const maxLength = containerLength - scrollerTop?.current?.getBoundingClientRect().height / 3;
 
     const scrollHeight = scrollerBg?.current?.getBoundingClientRect().height;
 
+    useEffect(() => {
+        if (scroll < 0) setPosition(0);
+        else setPosition(scrollTo(scroll, maxLength, scrollHeight));
+    }, [scroll]);
+
     const onMouseStart = (e) => {
-        
+        e.preventDefault();
         e.stopPropagation();
 
         const moveY = e.clientY - e.target.getBoundingClientRect().top;
@@ -30,19 +32,20 @@ export const ScrollBar = ({ scroll, maxLength }) => {
             e.stopPropagation();
 
             let clientY = e.clientY;
-
+            
             let newPosition = clientY - moveY - scrollerBg?.current?.getBoundingClientRect().top;
-            const bottomPoint = scrollerBg?.current?.offsetHeight - e.target.offsetHeight;
-
-            if (newPosition < 0) {
+            const bottomPoint = scrollerBg?.current?.offsetHeight - scrollerTop?.current?.offsetHeight;
+            
+            if (newPosition < 0) { 
                 newPosition = 0;
             }
-
+            
             if (newPosition > bottomPoint) {
                 newPosition = bottomPoint;
             }
 
             setPosition(newPosition);
+
             elem.scrollTo(0, scrollTo(newPosition, scrollHeight, maxLength));
         };
 
@@ -91,6 +94,7 @@ export const ScrollBar = ({ scroll, maxLength }) => {
             <div className="scroll__bg" />
             <div
                 className="scroll__top"
+                ref={scrollerTop}
                 onTouchStart={onTouchStart}
                 onMouseDown={onMouseStart}
                 style={{ top: position + 'px' }} 

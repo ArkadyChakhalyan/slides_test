@@ -8,7 +8,7 @@ export const Slide2 = () => {
     const [scroll, setScroll] = useState(0);
     
     const container = useRef(null);
-    const maxLength = container?.current?.getBoundingClientRect().top;
+    const containerLength = container?.current?.getBoundingClientRect().top;
 
     return (
         <Fragment>
@@ -20,7 +20,7 @@ export const Slide2 = () => {
                 <div className='slide-2__main-content' >
                     <ScrollBar 
                         scroll={scroll}
-                        maxLength={maxLength} />
+                        containerLength={containerLength} />
                     <div
                         className="container slide-2__container"
                         ref={container}
