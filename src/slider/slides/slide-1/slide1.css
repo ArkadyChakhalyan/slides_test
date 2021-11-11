@@ -18,6 +18,13 @@
 }
 
 .slide-1__btn-next {
-    margin-left: 420px;
-    margin-top: -138px;
+    margin-left: 566px;
+    margin-top: -97px;
+}
+
+.next {
+    width: 20px;
+    height: 13px;
+    background-image: url(../../../images/btn_next.png);
+    background-size: 20px 13px;
 }

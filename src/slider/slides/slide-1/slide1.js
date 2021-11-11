@@ -17,10 +17,18 @@ export const Slide1 = ({ onClick }) => {
                     <br />коммерческое
                     <br /> задание
                 </h1>
-                <img
-                    className='btn btn-next slide-1__btn-next'
-                    src={btn}
-                    onClick={onClick} />
+                <button
+                    className='btn slide-1__btn-next'
+                    onClick={onClick}>
+                    <div className='btn__icon'>
+                        <div className='btn__icon-inside'>
+                            <div className='next' />
+                        </div>
+                    </div>
+                    <span className='btn__text'>
+                        Что дальше?
+                    </span>
+                </button>
             </div>
             <DetailsSlide1Front />
         </Fragment>

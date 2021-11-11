@@ -1,10 +1,10 @@
 .slide-2__main-content {
     display: flex;
     align-items: center;
+    margin-top: 52px;
 }
 
 .slide-2__container {
-    margin-top: 52px;
     margin-left: 20px;
     width: 674px;
     height: 378px;

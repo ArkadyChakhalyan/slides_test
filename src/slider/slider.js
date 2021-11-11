@@ -52,7 +52,7 @@ import { Slide3 } from './slides/slide-3/slide3';
 //                 setPosition(Math.round(Math.min((position + clientX - touchStart), 0) / width) * width);
 //             } else {
 //                 setPosition((Math.round(Math.max((position - (touchStart - clientX)), - width * 2) / width) * width));
-                
+
 //                 // if (Math.round((Math.round(Math.max((position - (touchStart - clientX)), - width * 2) / width)) === -1)) setAnimationOn(true);
 //             }
 //         }
@@ -93,7 +93,7 @@ import { Slide3 } from './slides/slide-3/slide3';
 
 export const Slider = ({ homePressed, resetHomePressed }) => {
 
-    const width = 1024;
+    const width = -1024;
     const [position, setPosition] = useState(0);
 
     const [className, setClassName] = useState('slides');
@@ -103,7 +103,6 @@ export const Slider = ({ homePressed, resetHomePressed }) => {
     const [animationOn, setAnimationOn] = useState(false);
 
     const onTouchStart = (e) => {
-        console.log('2')
 
         setClassName('slides slides--transitioning');
 
@@ -117,10 +116,10 @@ export const Slider = ({ homePressed, resetHomePressed }) => {
 
             let clientX = e.touches[0].clientX;
 
-            if (clientX > touchStart) { 
-                setPosition(Math.min(((-width * position) - touchStart - clientX) / width, 0));
+            if (clientX > touchStart) {
+                setPosition(Math.min(((position * width) + clientX - touchStart), 0) / width);
             } else {
-                setPosition(Math.max(((-width * position) - (touchStart - clientX)) / (width * position), 2));
+                setPosition(Math.max(((position * width) - (touchStart - clientX)), width * 2) / width);
             }
         }
 
@@ -134,15 +133,15 @@ export const Slider = ({ homePressed, resetHomePressed }) => {
             setClassName('slides');
 
             if (clientX > touchStart) {
-                setPosition(Math.round(Math.min((position + clientX - touchStart), 0) / width));
+                setPosition(Math.round(Math.min(((position * width) + clientX - touchStart), 0) / width));
             } else {
-                setPosition((Math.round(Math.max((position - (touchStart - clientX)), - width * 2) / width)));
-                
+                setPosition(Math.round(Math.max(((position * width) - (touchStart - clientX)), width * 2) / width));
+
                 // if (Math.round((Math.round(Math.max((position - (touchStart - clientX)), - width * 2) / width)) === -1)) setAnimationOn(true);
             }
         }
     };
-    // console.log(position)
+
     const onTouchMove = !popupOn ? onTouchStart : () => { };
 
     useEffect(() => {
@@ -156,7 +155,7 @@ export const Slider = ({ homePressed, resetHomePressed }) => {
         <div>
             <ul
                 className={className}
-                style={{ transform: `translateX(${position * -width}px)` }}
+                style={{ transform: `translateX(${position * width}px)` }}
                 onTouchMove={onTouchMove} >
                 <li className='slides__item slide-1'>
                     <Slide1 onClick={() => setPosition(1)} />

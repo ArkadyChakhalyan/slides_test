@@ -1,20 +1,23 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './scroll-bar.scss';
 
-export const ScrollBar = ({ scroll }) => {
+export const ScrollBar = ({ scroll, maxLength }) => {
+
     const [position, setPosition] = useState(0);
 
     useEffect(() => {
         if (scroll < 0) setPosition(0);
-        else if (scroll > 155) setPosition(scrollTo(155, 155, 430));
-        else setPosition(scrollTo(scroll, 155, 430));
+        else if (scroll > maxLength) setPosition(scrollTo(maxLength, maxLength, scrollHeight));
+        else setPosition(scrollTo(scroll, maxLength, scrollHeight));
     }, [scroll]);
 
     const scrollerBg = useRef(null);
     const elem = document.getElementsByClassName('slide-2__container')[0];
 
+    const scrollHeight = scrollerBg?.current?.getBoundingClientRect().height;
+
     const onTouchStart = (e) => {
-        console.log('1')
+        
         e.stopPropagation();
 
         const moveY = e.touches[0].clientY - e.target.getBoundingClientRect().top;
@@ -38,7 +41,7 @@ export const ScrollBar = ({ scroll }) => {
             }
 
             setPosition(newPosition);
-            elem.scrollTo(0, scrollTo(newPosition, 430, 155));
+            elem.scrollTo(0, scrollTo(newPosition, scrollHeight, maxLength));
         };
 
         function onTouchEnd() {
@@ -46,7 +49,6 @@ export const ScrollBar = ({ scroll }) => {
             document.removeEventListener('touchmove', onTouchMove, true);
         };
     };
-
 
     return (
         <div className="scroll" ref={scrollerBg}>

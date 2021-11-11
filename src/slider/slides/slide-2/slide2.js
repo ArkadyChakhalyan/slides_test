@@ -1,10 +1,16 @@
-import { Fragment, useState } from "react";
+import { Fragment, useRef, useState } from "react";
 import { DetailsSlide2 } from "./details/details-slide-2";
 import { ScrollBar } from "./scroll-bar/scroll-bar";
 import './slide2.css';
 
 export const Slide2 = ({ animationOn, resetAnimation }) => {
+
     const [scroll, setScroll] = useState(0);
+    
+    const container = useRef(null);
+    const containerLength = container?.current?.getBoundingClientRect().height - container?.current?.getBoundingClientRect().top - 1;
+
+
     return (
         <Fragment>
             <DetailsSlide2
@@ -15,9 +21,12 @@ export const Slide2 = ({ animationOn, resetAnimation }) => {
                     текст<br />сообщения
                 </h3>
                 <div className='slide-2__main-content' >
-                    <ScrollBar scroll={scroll} />
+                    <ScrollBar 
+                        scroll={scroll}
+                        maxLength={containerLength} />
                     <div
                         className="container slide-2__container"
+                        ref={container}
                         onScroll={event => setScroll(event.target.scrollTop)} >
                         <p className="text">
                             <b>Lorem ipsum dolor sit amet</b>, consectetur adipiscing elit, sed do
