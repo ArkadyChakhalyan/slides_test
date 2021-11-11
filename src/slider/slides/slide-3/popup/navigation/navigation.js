@@ -7,6 +7,14 @@ import page2 from '../../../../../images/nav_2.png';
 
 export const Navigation = ({ page, onNext, onPrev }) => {
 
+    const page1On = page === 0 ?
+        <img className="navigation__page-1" src={page1} />
+        :
+        <img 
+            className="navigation__page-2--empty"
+            src={pageEmpty}
+            onClick={onPrev} />
+
     const page2On = page === 1 ?
         <img className="navigation__page-2" src={page2} />
         :
@@ -20,9 +28,7 @@ export const Navigation = ({ page, onNext, onPrev }) => {
             <img
                 className="navigation__btn-prev" src={prev}
                 onClick={onPrev} />
-            <img
-                className="navigation__page-1" src={page1}
-                onClick={onPrev} />
+            {page1On}
             {page2On}
             <img
                 className="navigation__btn-next" src={next}
