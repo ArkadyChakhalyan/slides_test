@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/slides_test/static/css/main.e772b895.chunk.css",
-    "main.js": "/slides_test/static/js/main.79419520.chunk.js",
-    "main.js.map": "/slides_test/static/js/main.79419520.chunk.js.map",
+    "main.css": "/slides_test/static/css/main.0af32819.chunk.css",
+    "main.js": "/slides_test/static/js/main.129c25d8.chunk.js",
+    "main.js.map": "/slides_test/static/js/main.129c25d8.chunk.js.map",
     "runtime-main.js": "/slides_test/static/js/runtime-main.7009b1ca.js",
     "runtime-main.js.map": "/slides_test/static/js/runtime-main.7009b1ca.js.map",
     "static/js/2.5c1d8f3c.chunk.js": "/slides_test/static/js/2.5c1d8f3c.chunk.js",
     "static/js/2.5c1d8f3c.chunk.js.map": "/slides_test/static/js/2.5c1d8f3c.chunk.js.map",
     "index.html": "/slides_test/index.html",
-    "static/css/main.e772b895.chunk.css.map": "/slides_test/static/css/main.e772b895.chunk.css.map",
+    "static/css/main.0af32819.chunk.css.map": "/slides_test/static/css/main.0af32819.chunk.css.map",
     "static/js/2.5c1d8f3c.chunk.js.LICENSE.txt": "/slides_test/static/js/2.5c1d8f3c.chunk.js.LICENSE.txt",
-    "static/media/slider.css": "/slides_test/static/media/bg_3.f237ec59.png",
+    "static/media/slider.scss": "/slides_test/static/media/bg_3.f237ec59.png",
     "static/media/blue_sperm_1.25fe42db.png": "/slides_test/static/media/blue_sperm_1.25fe42db.png",
     "static/media/blue_sperm_2.44868c03.png": "/slides_test/static/media/blue_sperm_2.44868c03.png",
     "static/media/blue_sperm_3.b7c7a1f7.png": "/slides_test/static/media/blue_sperm_3.b7c7a1f7.png",
@@ -26,13 +26,12 @@
     "static/media/bubble_8.727dea48.png": "/slides_test/static/media/bubble_8.727dea48.png",
     "static/media/pink_sperm_1.ff10a88f.png": "/slides_test/static/media/pink_sperm_1.ff10a88f.png",
     "static/media/pink_sperm_2.1706ec9d.png": "/slides_test/static/media/pink_sperm_2.1706ec9d.png",
-    "static/media/pink_sperm_3.21f62a76.png": "/slides_test/static/media/pink_sperm_3.21f62a76.png",
-    "static/media/pink_sperm_4.90323cfd.png": "/slides_test/static/media/pink_sperm_4.90323cfd.png"
+    "static/media/pink_sperm_3.21f62a76.png": "/slides_test/static/media/pink_sperm_3.21f62a76.png"
   },
   "entrypoints": [
     "static/js/runtime-main.7009b1ca.js",
     "static/js/2.5c1d8f3c.chunk.js",
-    "static/css/main.e772b895.chunk.css",
-    "static/js/main.79419520.chunk.js"
+    "static/css/main.0af32819.chunk.css",
+    "static/js/main.129c25d8.chunk.js"
   ]
 }
