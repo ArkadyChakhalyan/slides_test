@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/slides_test/static/css/main.a3f9f9e1.chunk.css",
-    "main.js": "/slides_test/static/js/main.80012636.chunk.js",
-    "main.js.map": "/slides_test/static/js/main.80012636.chunk.js.map",
+    "main.css": "/slides_test/static/css/main.e772b895.chunk.css",
+    "main.js": "/slides_test/static/js/main.79419520.chunk.js",
+    "main.js.map": "/slides_test/static/js/main.79419520.chunk.js.map",
     "runtime-main.js": "/slides_test/static/js/runtime-main.7009b1ca.js",
     "runtime-main.js.map": "/slides_test/static/js/runtime-main.7009b1ca.js.map",
     "static/js/2.5c1d8f3c.chunk.js": "/slides_test/static/js/2.5c1d8f3c.chunk.js",
     "static/js/2.5c1d8f3c.chunk.js.map": "/slides_test/static/js/2.5c1d8f3c.chunk.js.map",
     "index.html": "/slides_test/index.html",
-    "static/css/main.a3f9f9e1.chunk.css.map": "/slides_test/static/css/main.a3f9f9e1.chunk.css.map",
+    "static/css/main.e772b895.chunk.css.map": "/slides_test/static/css/main.e772b895.chunk.css.map",
     "static/js/2.5c1d8f3c.chunk.js.LICENSE.txt": "/slides_test/static/js/2.5c1d8f3c.chunk.js.LICENSE.txt",
     "static/media/slider.css": "/slides_test/static/media/bg_3.f237ec59.png",
     "static/media/blue_sperm_1.25fe42db.png": "/slides_test/static/media/blue_sperm_1.25fe42db.png",
@@ -19,8 +19,6 @@
     "static/media/blue_sperm_6.5ad603f5.png": "/slides_test/static/media/blue_sperm_6.5ad603f5.png",
     "static/media/blue_sperm_7.1c08a160.png": "/slides_test/static/media/blue_sperm_7.1c08a160.png",
     "static/media/bottle.9b42f3ea.png": "/slides_test/static/media/bottle.9b42f3ea.png",
-    "static/media/btn_about.31c3be38.png": "/slides_test/static/media/btn_about.31c3be38.png",
-    "static/media/btn_next.eb951e17.png": "/slides_test/static/media/btn_next.eb951e17.png",
     "static/media/bubble_1.dd358027.png": "/slides_test/static/media/bubble_1.dd358027.png",
     "static/media/bubble_2.fddf024f.png": "/slides_test/static/media/bubble_2.fddf024f.png",
     "static/media/bubble_4.2a1f68e3.png": "/slides_test/static/media/bubble_4.2a1f68e3.png",
@@ -34,7 +32,7 @@
   "entrypoints": [
     "static/js/runtime-main.7009b1ca.js",
     "static/js/2.5c1d8f3c.chunk.js",
-    "static/css/main.a3f9f9e1.chunk.css",
-    "static/js/main.80012636.chunk.js"
+    "static/css/main.e772b895.chunk.css",
+    "static/js/main.79419520.chunk.js"
   ]
 }
