@@ -1,0 +1,27 @@
+.slide-2 {
+
+    &__main-content {
+        display: flex;
+        align-items: center;
+        margin-top: 52px;
+    }
+
+    &__container {
+        margin-left: 20px;
+        width: 674px;
+        height: 378px;
+        padding: 10px 60px 50px 30px;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling : touch;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }  
+    }
+
+    &__title {
+        &--small {
+            margin-top: 48px;
+        }
+    }  
+}

@@ -1,6 +1,6 @@
 import schedule from '../../../../images/icon_schedule.png';
 import meal from '../../../../images/icon_meal.png';
-import './content-main.css';
+import './content.scss';
 
 export const ContentMain = () => {
     return (

@@ -1,6 +1,6 @@
 import { Navigation } from './navigation/navigation';
 import close from '../../../../images/btn_close.png';
-import './popup.css';
+import './popup.scss';
 import { ContentPopup1 } from '../content/content-popup-1';
 import { useState } from 'react';
 import { ContentPopup2 } from '../content/content-popup-2';

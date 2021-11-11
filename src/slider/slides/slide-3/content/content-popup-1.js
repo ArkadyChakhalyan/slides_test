@@ -1,4 +1,4 @@
-import './content-popup.css';
+import './content.scss';
 
 export const ContentPopup1 = () => {
     return (

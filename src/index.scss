@@ -1,0 +1,115 @@
+body {
+  margin: 0px;
+  background: rgb(53, 53, 53);
+  padding: 30px;
+}
+
+img {
+  transform: scale(0.5);
+}
+
+.title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin: 0px;
+
+  &--large {
+    font-size: 84pt;
+    line-height: 100%;
+    text-transform: uppercase;
+  }
+
+  &--medium {
+    font-size: 18pt;
+    color: rgb(140, 201, 232);
+    font-weight: 600;
+    line-height: 10%;
+    text-transform: uppercase;
+  }
+
+  &--small {
+    font-size: 18pt;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+}
+
+.container {
+    background: white;
+    border-radius: 35px;
+    box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.1);
+
+      &__slide {
+          position: absolute;
+          height: 612px;
+          width: 868px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 78px;
+      }
+  
+}
+
+.text {
+  font-size: 14pt;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  line-height: 170%;
+}
+
+.btn {
+  background-color: rgb(255, 106, 159);
+  border: none;
+  border-radius: 100px;
+  width: 262px;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18pt;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__icon-inside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: rgb(23, 23, 23);
+    border-radius: 50%;
+    box-shadow: 
+        3px 3px 6px -1px rgb(255, 255, 255, .8),
+        -2px -2px 5px 2px rgba(0, 0, 0, 0.4)
+  }
+
+  &__text {
+    color: black;
+    text-decoration: none;
+    width: 180px;
+  }
+}
+
+.window {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__app {
+    border: black 5px solid;
+    width: 1024px;
+    height: 768px;
+  }
+}

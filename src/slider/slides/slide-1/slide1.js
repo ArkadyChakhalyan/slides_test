@@ -1,5 +1,4 @@
-import btn from '../../../images/btn_next.png';
-import './slide1.css';
+import './slide1.scss';
 import { Fragment } from 'react';
 import { DetailsSlide1Back } from './details/details-slide-1-back';
 import { DetailsSlide1Front } from './details/details-slide-1-front';

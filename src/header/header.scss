@@ -1,0 +1,24 @@
+.header {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    left: 77px;
+    top: 16px;
+
+    &__home {
+        width: 24px;
+        height: 20px;
+        background-image: url(../images/icon_home.png);
+        background-size: 24px 20px;
+    }
+
+    &__name {
+        margin-left: 28px;
+        width: 106px;
+        height: 27px;
+        background-image: url(../images/header.png);
+        background-size: 106px 27px;
+    }
+}

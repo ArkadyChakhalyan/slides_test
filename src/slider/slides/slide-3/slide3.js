@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import { DetailsSlide3Front } from './details/details-slide-3-front';
 import { DetailsSlide3Back } from './details/details-slide-3-back';
-import './slide3.css';
+import './slide3.scss';
 import { ContentMain } from './content/content-main';
 import { Popup } from './popup/popup';
 

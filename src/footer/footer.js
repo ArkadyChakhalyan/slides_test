@@ -1,10 +1,7 @@
-import footer from '../images/footer.png';
-import './footer.css';
+import './footer.scss';
 
 export const Footer = () => {
     return (
-        <img
-            className='footer'
-            src={footer} />
+        <div className='footer' />
     );
 };

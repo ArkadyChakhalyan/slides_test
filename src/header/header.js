@@ -1,5 +1,4 @@
-import './header.css';
-import name from'../images/header.png';
+import './header.scss';
 
 export const Header = ({ onClick }) => {
 
@@ -8,9 +7,7 @@ export const Header = ({ onClick }) => {
             <div 
                 className='header__home'
                 onClick={onClick} />
-            <img 
-                className='header__name'
-                src={name} />
+            <div className='header__name' />
         </div>
     );
 };

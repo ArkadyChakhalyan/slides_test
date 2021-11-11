@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Footer } from "../footer/footer";
 import { Header } from "../header/header";
 import { Slider } from "../slider/slider";
-import './app.css';
+import './app.scss';
 
 export const App = () => {
 

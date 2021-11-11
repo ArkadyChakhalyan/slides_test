@@ -5,19 +5,19 @@
     margin: 0; 
     font-size: 0;
     transition: transform 0.5s ease-out;
-}
 
-.slides--transitioning {
-    transition: none;
-}
+    &--transitioning {
+        transition: none;
+    }
 
-.slides__item {
-    width: 1024px;
-    height: 768px;
-    background-size: 1024px 768px;
-    list-style-type: none;
-    display: inline-block;
-    position: relative;
+    &__item {
+        width: 1024px;
+        height: 768px;
+        background-size: 1024px 768px;
+        list-style-type: none;
+        display: inline-block;
+        position: relative;
+    }
 }
 
 .slide-1 {

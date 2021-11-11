@@ -1,0 +1,40 @@
+.navigation {
+    &__container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__container > div {
+        margin-left: 10px;
+    }
+
+    &__page {
+        width: 12px;
+        height: 12px;
+        border-radius: 10px;
+        background-color: rgb(255, 106, 159);
+        
+        &--empty {
+            width: 8px;
+            height: 8px;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+    }
+
+    &__btn-l {
+        width: 11px;
+        height: 14px;
+        background-image: url(../../../../../images/btn_nav_prev.png);
+        background-size: 11px 14px;
+    }
+
+    &__btn-r {
+        width: 11px;
+        height: 14px;
+        background-image: url(../../../../../images/btn_nav_next.png);
+        background-size: 11px 14px;
+    }
+}
