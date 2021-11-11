@@ -7,7 +7,10 @@ import { Slide3 } from './slides/slide-3/slide3';
 
 export const Slider = ({ homePressed, resetHomePressed }) => {
 
-    const width = -1024;
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+
+    const width = -screenWidth;
     const [position, setPosition] = useState(0);
 
     const [className, setClassName] = useState('slides');
@@ -17,7 +20,6 @@ export const Slider = ({ homePressed, resetHomePressed }) => {
     const [animationOn, setAnimationOn] = useState(false);
 
     const onMouseStart = (e) => {
-        console.log(e)
 
         e.preventDefault();
 
@@ -109,18 +111,24 @@ export const Slider = ({ homePressed, resetHomePressed }) => {
         <div>
             <ul
                 className={className}
-                style={{ transform: `translateX(${position * width}px)` }}
+                style={{ transform: `translateX(${position * width}px)`, height: screenHeight + 'px' }}
                 onTouchMove={onTouchMove}
                 onMouseDown={onMouseMove} >
-                <li className='slides__item slide-1'>
+                <li 
+                    className='slides__item slide-1'
+                    style={{width: screenWidth + 'px', backgroundSize: `${screenWidth}px ${screenHeight}px`}} >
                     <Slide1 onClick={() => setPosition(1)} />
                 </li>
-                <li className='slides__item slide-2'>
+                <li 
+                    className='slides__item slide-2'
+                    style={{width: screenWidth + 'px', backgroundSize: `${screenWidth}px ${screenHeight}px`}} >
                     <Slide2
                         animationOn={animationOn}
                         resetAnimation={() => setAnimationOn(false)} />
                 </li>
-                <li className='slides__item slide-3'>
+                <li 
+                    className='slides__item slide-3'
+                    style={{width: screenWidth + 'px', backgroundSize: `${screenWidth}px ${screenHeight}px`}} >
                     <Slide3
                         setPopupTrue={() => setPopupOn(true)}
                         setPopupFalse={() => setPopupOn(false)} />

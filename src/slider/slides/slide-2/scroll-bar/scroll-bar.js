@@ -16,6 +16,42 @@ export const ScrollBar = ({ scroll, maxLength }) => {
 
     const scrollHeight = scrollerBg?.current?.getBoundingClientRect().height;
 
+    const onMouseStart = (e) => {
+        
+        e.stopPropagation();
+
+        const moveY = e.clientY - e.target.getBoundingClientRect().top;
+
+        document.addEventListener('mousemove', onMouseMove, true);
+        document.addEventListener('mouseup', onMouseUp);
+
+        function onMouseMove(e) {
+
+            e.stopPropagation();
+
+            let clientY = e.clientY;
+
+            let newPosition = clientY - moveY - scrollerBg?.current?.getBoundingClientRect().top;
+            const bottomPoint = scrollerBg?.current?.offsetHeight - e.target.offsetHeight;
+
+            if (newPosition < 0) {
+                newPosition = 0;
+            }
+
+            if (newPosition > bottomPoint) {
+                newPosition = bottomPoint;
+            }
+
+            setPosition(newPosition);
+            elem.scrollTo(0, scrollTo(newPosition, scrollHeight, maxLength));
+        };
+
+        function onMouseUp() {
+            document.removeEventListener('mouseup', onMouseUp);
+            document.removeEventListener('mousemove', onMouseMove, true);
+        };
+    };
+
     const onTouchStart = (e) => {
         
         e.stopPropagation();
@@ -56,6 +92,7 @@ export const ScrollBar = ({ scroll, maxLength }) => {
             <div
                 className="scroll__top"
                 onTouchStart={onTouchStart}
+                onMouseDown={onMouseStart}
                 style={{ top: position + 'px' }} 
             />
         </div>

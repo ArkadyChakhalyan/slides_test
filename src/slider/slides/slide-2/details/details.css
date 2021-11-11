@@ -3,19 +3,3 @@
     right: -340px;
     top: -60px;
 }
-
-.pink-sperm-4 {
-    position: absolute;
-    right: -157px;
-    top: -200px;
-}
-
-.pink-sperm-3--animation {
-    animation: animatePinkSperm3 1.8s ease-out 0.5s;
-    animation-iteration-count: 1;
-}
-
-.pink-sperm-4--animation {
-    animation: animatePinkSperm4 2.5s ease-out 0.5s;
-    animation-iteration-count: 1;
-}

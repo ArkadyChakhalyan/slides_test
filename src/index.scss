@@ -1,7 +1,6 @@
 body {
-  margin: 0px;
-  background: rgb(53, 53, 53);
-  padding: 30px;
+  background: rgb(41, 41, 41);
+  margin: 0;
 }
 
 img {
@@ -98,18 +97,5 @@ img {
     color: black;
     text-decoration: none;
     width: 180px;
-  }
-}
-
-.window {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  &__app {
-    border: black 5px solid;
-    width: 1024px;
-    height: 768px;
   }
 }

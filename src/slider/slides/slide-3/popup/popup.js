@@ -7,13 +7,18 @@ import { ContentPopup2 } from '../content/content-popup-2';
 
 export const Popup = ({ onClose }) => {
 
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+
     const [page, setPage] = useState(0);
 
     const content = page === 0 ? <ContentPopup1 /> : <ContentPopup2 />
 
     return (
-        <div className='popup__bg'
-            onClick={onClose}>
+        <div 
+            className='popup__bg'
+            style={{width: screenWidth + 'px', height: screenHeight + 'px'}}
+            onClick={onClose} >
             <div className="container slide-3__container-3"
                 onClick={e => e.stopPropagation()}>
                 <img
